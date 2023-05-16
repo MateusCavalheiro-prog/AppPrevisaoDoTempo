@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts Google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Css  -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Top Weather</title>
+</head>
+<body>
+
+  <div class="full-container">
+
+    <header class="header">
+      <section class="header__top">
+        <div class="header__logo">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>Weather Up</span>
+        </div>
+        <!-- <i data-js="location-icon" class="fa-regular fa-circle-dot"></i> -->
+      </section>
+
+      <section class="header__search-city">
+        <h2>Informações do clima</h2>
+        <form class="header__search-bar">
+          <input type="text" name="city" placeholder="Procure por uma cidade" autofocus>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+      </section>
+    </header>
+
+    <div data-js="loader" class="hide loader">
+      <i class="fa-solid fa-spinner"></i>
+    </div>
+
+    <main class="hide">
+
+      <section class="card-weather">
+        <h1 data-js="city-name" class="card-weather__city-name"></h1>
+        <div class="card-weather__temperature-description">
+          <img data-js="weather-img" src="">
+          <p data-js="weather-degrees-celsius"></p>
+          <span data-js="weather-description"></span>
+        </div>
+        <div class="card-weather__temp-max-min">
+          <p  class="temp-max">
+            Temp. max
+            <span data-js="temp-max"></span>
+          </p>
+          <p  class="temp-min">
+            Temp. min
+            <span data-js="temp-min"></span>
+          </p>
+        </div>
+      </section>
+
+      <section class="carousel-container">
+        <div class="carousel__wrapper">
+          <ul data-js="carousel-gallery" class="carousel__gallery">
+            
+          </ul>
+        </div>
+      </section>
+  
+      <ul class="weather-info-container">
+        <li class="weather-info__card">
+          <div>
+            <i class="fa-solid fa-wind"></i>
+            <p>Vento</p>
+          </div>
+          <p data-js="card-wind"></p>
+        </li>
+  
+        <li class="weather-info__card">
+          <div>
+            <i class="fa-solid fa-droplet"></i>
+            <p>Umidade</p>
+          </div>
+          <p data-js="card-humidity"></p>
+        </li>
+  
+        <li class="weather-info__card">
+          <div>
+            <i class="fa-solid fa-leaf"></i>
+            <p>Qualidade do ar</p>
+          </div>
+          <p data-js="card-air-quality"></p>
+        </li>
+  
+        <li class="weather-info__card">
+          <div>
+            <i class="fa-solid fa-eye"></i>
+            <p>Visibilidade</p>
+          </div>
+          <p data-js="card-visibility"></p>
+        </li>
+      </ul>
+    </main> <!--main end-->
+
+    
+  </div> <!--end full container-->
+
+  <script src="js/handle-load.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
